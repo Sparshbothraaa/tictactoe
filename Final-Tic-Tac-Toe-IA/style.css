@@ -1,0 +1,78 @@
+td {
+    height: 70px;
+    width: 100px;
+}
+
+.startBtn {
+    background-color: #9EE3B4;
+    border: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.winner {
+    background-color: #e83151;
+}
+
+    /* Style for the square div */
+.square-div {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1000; /* Ensures it stays on top of the table */
+    border-radius: 10px;
+    display: none;
+}
+
+    /* Ensures the container is relatively positioned so the div can be absolutely positioned */
+.container-fluid {
+    position: relative;
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Container for the options */
+.overlay-content {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Style for the buttons */
+.overlay-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.overlay-content button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
